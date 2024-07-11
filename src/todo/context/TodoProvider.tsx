@@ -22,9 +22,6 @@ const INITIAL_STATE: TodoState = {
     pending: 2
 }
 
-
-
-
 interface props {
     children: JSX.Element | JSX.Element[]
 }
@@ -36,7 +33,6 @@ export const TodoProvider = ({ children }: props ) => {
     const toggleTodo = ( id: string ) => {
         dispatch({ type: 'toggleTodo', payload: { id } })
     }
-
 
     return (
         <TodoContext.Provider value={{

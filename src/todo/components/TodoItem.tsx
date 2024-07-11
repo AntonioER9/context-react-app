@@ -12,11 +12,16 @@ export const TodoItem = ({ todo }: props) => {
     // const { toggleTodo } = useContext( TodoContext )
     const { toggleTodo } = useTodos();
 
+    // const handleDbClick = () => {
+    //     toggleTodo(todo.id);
+    // }
+
     return (
         <li style={{
             cursor: 'pointer',
             textDecoration: todo.completed ? 'line-through' : ''
         }}
+            // onDoubleClick={ handleDbClick }>
             onDoubleClick={ () => toggleTodo( todo.id ) }>
            { todo.desc } 
         </li>
